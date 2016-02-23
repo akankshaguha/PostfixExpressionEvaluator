@@ -1,0 +1,31 @@
+group 'HRP001'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+
+sourceCompatibility = 1.5
+
+
+jacocoTestReport {
+    jacocoTestReport {
+
+        sourceDirectories = fileTree(dir: 'src/main/java/com/bitwiseglobal/postfix')
+        classDirectories = fileTree(dir: 'build/classes/main/com/bitwiseglobal/postfix')
+
+        reports {
+            html.enabled = true
+            xml.enabled = true
+            csv.enabled = false
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
