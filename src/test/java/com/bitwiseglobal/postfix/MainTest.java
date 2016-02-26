@@ -16,6 +16,6 @@ public class MainTest {
 
     {
         Main main=new Main();
-      assertEquals(20,main.inputString("17 3 +"));
+      assertEquals(21,main.inputString("18 3 +"));
     }
 }
